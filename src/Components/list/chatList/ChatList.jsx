@@ -1,8 +1,12 @@
 import React, { useState } from 'react'
 import "./chatList.css"
+import AddUser from './AddUser1'
 
 const chatList = () => {
   const [addMode , setAddMode] = useState(false);
+
+
+
   return (
     <div className='chatList'>
       <div className="search">
@@ -34,8 +38,11 @@ const chatList = () => {
           <p>Hello</p>
         </div>
       </div>
+
+      {addMode && <AddUser/>}
     </div>
   )
 }
 
 export default chatList
+
