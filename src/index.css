@@ -8,7 +8,8 @@
 }
 
 body{
-  background-image: url("/public/bg.jpg");
+  background-image: url("../src/assets/alexander-grey-62vi3TG5EDg-unsplash.jpg");
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;

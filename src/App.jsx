@@ -62,7 +62,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./lib/firebase";
 import { useState, useEffect } from "react";
 import useUserStore from "./lib/UserStore";
-import { CloudConfig } from "@cloudinary/url-gen/index";
+
 
 const App = () => {
   // const isLoading = false;
@@ -81,6 +81,7 @@ const App = () => {
   // if (isLoading) {
   //   return <div className="loading">Loading...</div>;
   // }
+  
 
   return (
     <div className="container">
@@ -89,6 +90,7 @@ const App = () => {
           <List />
           <Chat />
           <Detail />
+          
         </>
       ) : (
         <Login />
