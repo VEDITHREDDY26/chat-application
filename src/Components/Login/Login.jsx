@@ -7,7 +7,6 @@
 // import { db } from '../../lib/firebase'
 
 
-
 // const Login = () => {
 //   const[avatar,setAvatar] = useState({
 //     file:null,
@@ -73,7 +72,6 @@
 //     console.log(uploadedUrl);
 //   }
 
-
 //     // const user = true;
 //   return (
 //     <div className='login'>
@@ -91,7 +89,6 @@
 //       <div className="separator">
 
 //       </div>
-
 
 //       <div className='item'>
 //         <h2>Create an account </h2>
@@ -114,7 +111,6 @@
 
 // export default Login
 
-
 // import React, { useState } from "react";
 // import "./Login.css";
 // import { toast } from "react-toastify";
@@ -123,7 +119,6 @@
 // import { doc, setDoc } from "firebase/firestore";
 // import { db } from "../../lib/firebase";
 
-
 // const Login = () => {
 //   const [avatar, setAvatar] = useState({
 //     file: null,
@@ -131,7 +126,6 @@
 //   });
 
 //   const [loading,setLoading] = useState(false);
-
 
 //   const handleRegister = async (e) => {
 //     e.preventDefault();
@@ -255,7 +249,6 @@
 
 
 
-
 import React, { useState } from "react";
 import "./Login.css";
 import { toast } from "react-toastify";
@@ -277,7 +270,7 @@ const Login = () => {
 
   const handleRegister = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    setLoading(false);
     const formData = new FormData(e.target);
     const { username, email, password } = Object.fromEntries(formData);
 
@@ -371,17 +364,17 @@ const Login = () => {
 
     const data = new FormData();
     data.append("file", file);
-    data.append("upload_preset", "chat-application");
-    data.append("cloud_name", "dkza3nom1");
+    data.append("upload_preset", "chat-app2");
+    data.append("cloud_name", "dssejymog");
 
     try {
       const res = await fetch(
-        "https://api.cloudinary.com/v1_1/dkza3nom1/image/upload",
+        "https://api.cloudinary.com/v1_1/dssejymog/image/upload",
         {
           method: "POST",
           body: data,
         }
-      );
+    );
 
       if (!res.ok) {
         throw new Error("Failed to upload image");
@@ -400,7 +393,6 @@ const Login = () => {
       toast.error("Failed to upload avatar");
     }
   };
-
   return (
     <div className="login">
       <div className="item">
@@ -442,5 +434,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
