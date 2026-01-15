@@ -13,7 +13,7 @@ A modern, feature-rich real-time chat application built with React and Firebase,
 
 ### Authentication Interface
 
-![Login and Registration](screenshots/auth-screen.png)
+![Login and Registration](screenshots/authentication.png)
 _Secure Firebase authentication with dual-panel design for login and registration_
 
 The authentication system features:
@@ -26,7 +26,7 @@ The authentication system features:
 
 ### Main Chat Application
 
-![Chat Interface](screenshots/main-interface.png)
+![Chat Interface](screenshots/chatscreen.png)
 _Real-time chat application with glassmorphism UI, image sharing, and privacy controls_
 
 The main interface showcases:
