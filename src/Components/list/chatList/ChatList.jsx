@@ -77,12 +77,11 @@ const ChatList = () => {
   const {changeChat} = useChatStore();
 
   useEffect(() => {
-    if (!currentUser?.id) {
-      console.error("User not logged in or currentUser.id is undefined.");
-      return;
+    // Guard: Don't attempt Firestore access if user is not authenticated
+    if (!currentUser || !currentUser.id) {
+      setChats([]); // Clear chats when no user is logged in
+      return; // Exit early - don't set up Firestore listener
     }
-
-    
 
     const unsubscribe = onSnapshot(doc(db, "userChats", currentUser.id), async (snapshot) => {
       if (!snapshot.exists()) {

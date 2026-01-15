@@ -17,7 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-toastify": "^10.0.6",
-    "z ustand": "^5.0.2"
+    "zustand": "^5.0.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
